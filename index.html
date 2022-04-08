@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    
+    <title>CODE QUIZ</title>
+  </head>
+  <body>
+    <!-- Start header -->
+    <header class="header">
+      <div class="container">
+            <div id="highscore" class="highScore"> View High Scores</div>
+            <h1 id="header-title">Superior Code Quiz</h1>
+            <table id=timers style="visibility: hidden;">
+              <tr>
+                <td> Time left in Game: </td>
+                <td> <span id="gameTimer" class="nav-item"></span> </td>
+              </tr>
+               <tr>
+                <td>Time left for Question:</td>
+                <td> <span id="quesTimer" ></span> </td>
+              </tr>
+            </table>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+    <!-- start Content -->
+    <div class="container">
+      <!-- need a place for the intro instructions and quiz -->
+      <section id="details"> 
+          <p id="main-heading">This game is a timed quiz</p>
+          <p id="instructions">"you will have 15 seconds to answer each question.  If you correctly answer you will score points.  The quicker you answer the more points you score.  Answer incorrectly and you will lose time.</p>
+          <button id="startQuiz" class="btn btn-primary">Start Code Quiz</button>
+      </section>
+    </div>    
+  <!-- End Content -->
+
+  <!-- Start Footer -->
+    <nav class="footer ">
+        <div class="footer-text">Made by Inglish</div>
+    </nav>
+  <!-- End Footer -->
+
+    <!-- read in file containing questions for quiz -->
+    <script src='./assets/js/questions.js'></script>
+    <!-- read in javascript file  -->
+    <script src='./assets/js/script.js'></script>
+  </body>
+</html>
