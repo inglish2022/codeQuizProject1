@@ -1,0 +1,124 @@
+body {
+    font-family: Arial;
+    font-size: 30px;
+    padding-top: 90px;
+  }
+  
+  button {
+    margin: 8%;
+    color: #fff;
+    background: lightslategray;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    border-top: 1px solid blueviolet;
+  }
+  
+  .header {
+    background-color:  #b6d7e2;  
+    color: #97bdc9;  
+    padding-bottom: 0;
+    padding-left: 0;
+    border-bottom: solid;
+    border-bottom-color: #ccc;
+    width: 100%;
+  }
+  
+  #header-title {
+    padding: 15px;
+    font-size: 30px;
+    color: #fff !important; 
+  }
+  
+  
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  .highScore {
+    text-decoration: none;
+     }
+
+  .highScore:hover {
+    background-color: #cdb6e2;  
+    color: #666;
+  }
+  
+    
+  #details {
+    background-color: #ab95b8;  
+    margin-top: 20px;
+    margin-bottom: 80px;
+    padding: 90px;
+  } 
+   
+  
+  li {
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #897d9a;
+    color: #fff;
+    font-size: 1.5em;
+    line-height: 1.5;
+    list-style-type: none;
+  }
+  
+  li:hover {
+    background-color: #9e9268;
+  }
+  
+  #answer-image {
+    float: left;
+    padding-right: 1em;
+    padding-top: 0.25em;
+  }
+  
+  #startQuiz{
+    color: #fff;
+        background:  #b6d7e2;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding: 0 35px;
+        border: 1px solid rgb(243, 241, 244);
+  }
+
+  #startQuiz:hover  {
+      background-color: #cdb6e2;
+  }
+  
+  .footer {
+    background-color: rgb(105, 93, 110);
+    height: 10%;
+    border-top: solid;
+    border-top-color: #b6d7e2;  
+    border-top-width: 50px;
+  }
+  
+  .footer-text {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color:#fff; 
+  }
+  
+  /* media query for screen size to be applied to center text to switch at same time as navbar */
+  @media (max-width: 768px) {
+    .container {
+      /* removes paddding on either side */
+      padding-left: 0;
+      padding-right: 0;
+    }
+  
+  
+    
+  
+  
+    .highScore{
+      padding: 1px;
+    }
+  }
