@@ -19,7 +19,7 @@ https://github.com/inglish2022/codeQuizProject1
 
 
 
-![AltText](assets\images\Screenshot.png)
+![AltText](./assets/images/Screenshot.png)
 
 
 ##  Authors
