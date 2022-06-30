@@ -285,10 +285,16 @@ function endOfGame() {
   initialsInput.setAttribute("maxlength","3");
   initialsInput.setAttribute("size","3");
 
+  let submitBtn = document.createElement("button");
+  submitBtn.setAttribute("class", "btn btn-secondary");
+  submitBtn.textContent = "Submit Initial";
+  submitBtn.addEventListener("click", saveHighscores)
+
   mainEl.appendChild(heading);
   mainEl.appendChild(instructions);
   mainEl.appendChild(initialsLabel);
   mainEl.appendChild(initialsInput);
+  mainEl.appendChild(submitBtn);
   mainEl.appendChild(par);
   mainEl.appendChild(playAgain);
 
@@ -317,6 +323,27 @@ function endOfGame() {
   });
 }
 
+function saveHighscores(){
+  var userInitialEl = document.getElementById('userInitials');
+
+  let storedScores = JSON.parse(localStorage.getItem('highScores')) || []
+
+  let newScore = {
+    score: score,
+    initials: userInitialEl.value
+  }
+
+  storedScores.push(newScore)
+
+  localStorage.setItem("highScores", JSON.stringify(storedScores));
+}
+
+
+
+
+
+
+
 function highScores() {
   stopTime();
   clearDetails();
@@ -329,34 +356,26 @@ function highScores() {
   
   let heading = document.createElement("h2");
   heading.setAttribute("id", "main-heading");
-  heading.textContent = "Top 5 High Score Hall of Fame";
+  heading.textContent = "High Score Hall of Fame";
+
+  let scoresUl = document.createElement("ul");
 
   mainEl.appendChild(heading);
+  mainEl.appendChild(scoresUl);
 
   
   if ( storedScores !== null ) {
     
     storedScores.sort((a,b) => (a.score < b.score) ? 1: -1);
-
-    
-    let numScores2Display = 5;
-    if ( storedScores.length < 5 ) { 
-      numScores2Display = storedScores.length; 
-    }
-
-    for (var i = 0; i < numScores2Display; i++) {
+    storedScores.forEach(function(scoreli){
+      let liel=document.createElement("li")
+      liel.textContent=`initials: ${scoreli.initials}, score: ${scoreli.score}`
+      scoresUl.append(liel)
+    })
 
 
-      var s = storedScores[i];
 
-      var p = document.createElement("p");
-      p.textContent = s.name + " " + s.score + " ( " + s.type + " )";
-      mainEl.appendChild(p);
-    }
-  } else {
-    var p = document.createElement("p");
-    p.textContent =  "Your Initials Here!"
-    mainEl.appendChild(p);
+
   }
 
   

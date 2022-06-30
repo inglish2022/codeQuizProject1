@@ -14,6 +14,11 @@ body {
     padding: 0 35px;
     border-top: 1px solid blueviolet;
   }
+
+  button:hover  {
+    background-color: #cdb6e2;  
+    color: #666;
+  }
   
   .header {
     background-color:  #b6d7e2;  
